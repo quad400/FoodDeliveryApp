@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "allowJs": true,
+    "checkJs": false,
+    "target": "es6",
+    "declaration": true,
+  },
+  "include": [
+    "./**/*"
+  ],
+  "extends": "expo/tsconfig.base"
+}
