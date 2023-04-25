@@ -5,12 +5,12 @@ import { COLORS, FONTS } from '../../../constants'
 import Review from './Review'
 import Information from './Information'
 
-
 const Tab = createMaterialTopTabNavigator()
 
-const ItemTabs = (item) => {
+const ItemTabs = ({item}) => {
 
   return (
+
     <Tab.Navigator 
         screenOptions={{
             tabBarShowLabel: true,
@@ -29,19 +29,21 @@ const ItemTabs = (item) => {
 
     >
         <Tab.Screen 
-            options={item}
+
             name='Products'
+
             component={Products}
-            // initialParams={item}
+            initialParams={{item}}
         />
-        {/* <Tab.Screen 
+       <Tab.Screen 
             name='Review'
             component={Review}
-            initialParams={item}
-        /> */}
+            initialParams={{item}}
+     />
         <Tab.Screen 
             name='Information'
             component={Information}
+            initialParams={{item}}
         />
             
     </Tab.Navigator>

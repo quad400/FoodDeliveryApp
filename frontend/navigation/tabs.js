@@ -1,9 +1,10 @@
 import {COLORS,SIZES,icons} from '../constants'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import TabIcon from '../components/TabIcon'
-import {Home,Order,Notification,Profile} from '../screens'
+import {Home,Order,Favourite,Profile} from '../screens'
 import { useNavigation } from '@react-navigation/native'
 import { useLayoutEffect } from 'react'
+import NearBy from '../screens/nearby/NearBy'
 
 const Tab = createBottomTabNavigator()
 
@@ -49,6 +50,22 @@ const Tabs = () => {
 
         />
         <Tab.Screen 
+            name='Nearby'
+            component={NearBy}
+            options={{
+                tabBarIcon: ({ focused }) => {
+                    return (
+                        <TabIcon
+                            focused={focused}
+                            icon={icons.compass}
+                            label='Nearby'
+                        />
+                    )
+                }
+            }}
+
+        />
+        <Tab.Screen 
             name='Order'
             component={Order}
             options={{
@@ -65,15 +82,15 @@ const Tabs = () => {
 
         />
         <Tab.Screen 
-            name='Notification'
-            component={Notification}
+            name='Favourite'
+            component={Favourite}
             options={{
                 tabBarIcon: ({ focused }) => {
                     return (
                         <TabIcon
                             focused={focused}
-                            icon={icons.notification}
-                            label='Notification'
+                            icon={icons.favoriteWhite}
+                            label='Favourite'
                         />
                     )
                 }

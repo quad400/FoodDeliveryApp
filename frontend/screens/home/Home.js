@@ -2,14 +2,13 @@ import { View, Text, SafeAreaView, Image, TouchableOpacity, TextInput, ScrollVie
 import {useLayoutEffect} from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { COLORS, FONTS, SIZES, dummyData, icons } from "../../constants";
-import { Card, Card2, Features, Features2, Header, IconButton,SearchTab } from '../../components';
+import { Card, Card2, Features, Header, IconButton,SearchTab } from '../../components';
+import { Features2 } from "../../components/Features2"
 import { useRef } from 'react';
 
 const Home = () => {
 
     const navigation = useNavigation()
-
-    const contentRef = useRef(0)
 
   useLayoutEffect(()=> {
     navigation.setOptions({
@@ -60,7 +59,6 @@ const Home = () => {
                             isIcon={true}
                             isText={false}
                             inputDisable={true}
-                            // filterPress={}
                         />
                     </TouchableOpacity>
                 </View>
@@ -72,7 +70,7 @@ const Home = () => {
         return (
             <FlatList
                 ListHeaderComponent={
-                <View>
+                <>
                 <Features label="Categories">
                 
                     <FlatList 
@@ -87,7 +85,7 @@ const Home = () => {
                             keyExtractor={(item)=>{`category__${item.id}`}}
                             renderItem={({item, index})=> {
                             return (
-                                <TouchableOpacity>
+                                <TouchableOpacity key={index}>
                                     <View style={{
                                         paddingHorizontal: SIZES.padding,
                                         paddingVertical: SIZES.padding * 0.5,
@@ -134,7 +132,7 @@ const Home = () => {
                         renderItem={({item, index})=> {
                         return (
 
-                            <TouchableOpacity onPress={()=>navigation.navigate("FoodDetail",{
+                            <TouchableOpacity key={index} onPress={()=>navigation.navigate("FoodDetail",{
                                 item
                             })}>
                                 <Card
@@ -197,7 +195,6 @@ const Home = () => {
                         contentContainerStyle={{
                             marginBottom: SIZES.padding,
                         }}
-                        
                         showsHorizontalScrollIndicator={false}
                         keyExtractor={(item)=>{`Food__${item.id}`}}
                         renderItem={({item, index})=> {
@@ -210,7 +207,7 @@ const Home = () => {
                         }}
                     />
                 </TouchableOpacity>
-            </View>
+            </>
                 }
             />
         )

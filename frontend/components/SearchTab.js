@@ -2,8 +2,6 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
 import {IconButton, TextButton} from './'
 import { COLORS, FONTS, SIZES, icons } from '../constants'
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview'
-
 
 const SearchTab = ({
     textOnPress,
@@ -15,7 +13,6 @@ const SearchTab = ({
     filterPress
 }) => {
   return (
-    <KeyboardAwareScrollView>
         <View style={{
             flexDirection:'row',
             alignItems: 'center',
@@ -78,7 +75,6 @@ const SearchTab = ({
             />}
             </View>
         </View>
-    </KeyboardAwareScrollView>
   )
 }
 

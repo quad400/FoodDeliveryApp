@@ -41,10 +41,12 @@ const SIZES = {
 
 const FONTS = {
     largeTitle: { fontFamily: "PoppinsRegular", lineHeight: 56 },
+    largeTitle2: { fontFamily: "PoppinsBold", lineHeight: 56 },
     h1: { fontFamily: "PoppinsBlack", lineHeight: 36 },
     h2: { fontFamily: "PoppinsBold", lineHeight: 30 },
     h3: { fontFamily: "PoppinsBold", lineHeight: 22 },
     h4: { fontFamily: "PoppinsSemiBold", lineHeight: 22 },
+    h5: { fontFamily: "PoppinsSemiBold", lineHeight: 50 },
     body1: { fontFamily: "PoppinsRegular", lineHeight: 36 },
     body2: { fontFamily: "PoppinsRegular", lineHeight: 30 },
     body3: { fontFamily: "PoppinsMedium", lineHeight: 22 },

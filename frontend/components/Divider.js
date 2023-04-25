@@ -9,7 +9,8 @@ const Divider = ({thick,width}) => {
             width: '100%',
             ...thick,
             ...width,
-            backgroundColor: COLORS.light
+            backgroundColor: COLORS.light,
+            opacity: 0.5
         }}></View>
   )
 }

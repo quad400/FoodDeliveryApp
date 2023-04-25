@@ -1,9 +1,8 @@
 import { View, Text, ScrollView, Image } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
-import { Divider, Features, Header, IconButton, SearchTab } from '../../components';
+import { Divider, Features, Header, IconButton } from '../../components';
 import { COLORS, FONTS, SIZES, dummyData, icons } from '../../constants';
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scrollview";
 
 const Search = () => {
 
@@ -142,14 +141,14 @@ const Search = () => {
 
         {/* Header */}
         <Header>
-            <SearchTab
+            {/* <SearchTab
                 searchPress={()=> navigation.navigate('SearchResult')} 
                 placeholder="Searching..."
                 isIcon={false}
                 isText={true}
                 inputDisable={false}
                 textOnPress={()=>navigation.goBack()}
-            />
+            /> */}
         </Header>
 
         {/* Content */}

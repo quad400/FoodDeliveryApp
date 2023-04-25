@@ -219,6 +219,7 @@ const FoodDetail = ({route}) => {
     function renderAddToCartButton() {
         return (
             <TouchableOpacity 
+                onPress={()=>navigation.navigate('ConfirmOrder')}
                 disabled={selectedItem!==""?false: true}
                 style={{
                 justifyContent: "space-between",

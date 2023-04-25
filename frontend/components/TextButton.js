@@ -7,6 +7,7 @@ const TextButton = ({label,onPress,textStyle}) => {
     <TouchableOpacity onPress={onPress}>
         <Text
           style={{
+            textAlign: 'center',
             color: COLORS.white,
             ...FONTS.body3,
             ...textStyle

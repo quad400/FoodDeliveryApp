@@ -2,14 +2,11 @@ import { View, Text, Image, FlatList } from 'react-native'
 import React from 'react'
 import { COLORS, FONTS, SIZES, icons } from '../constants'
 import IconButton from './IconButton'
-import Card from './Card'
 import Card2 from './Card2'
 
 const Features2 = ({label, onPress, content}) => {
   return (
-    <View style={{
-
-    }}>
+    <>
         <View 
             style={{
                 flexDirection: 'row',
@@ -66,7 +63,7 @@ const Features2 = ({label, onPress, content}) => {
                 )
             }}
         />
-    </View>
+    </>
   )
 }
 
